@@ -1,4 +1,4 @@
-% create signals for simulink
+% create signals for simulink APS algorithm path waypoints
 wpts = Simulink.Signal;
 wpts.DataType = 'double';
 wpts.Complexity = 'real';
