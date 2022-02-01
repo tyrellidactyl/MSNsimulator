@@ -1,4 +1,4 @@
-clear; clc;    % cd('/home/ty/MSNsimulator/')
+clear; clc;    % cd('/MSNsimulator/')
 
 %% Simulation Parameter Configuration:
 modelParameters;
