@@ -1,0 +1,92 @@
+function [PlumeD,SigmaY,str] = GPlume(plumecase)
+% Fixed: Static Gaussian Plumes - 
+%         Fixed Ground Source, 
+%           Wind Velocity = [0,2,0], 
+%             Diffusion constant: 0.5
+
+
+plumecase = num2str(plumecase);
+
+    switch(plumecase)
+        
+   case '1'
+        path = 'home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/';
+        str = 'Q10-U3-ClassA-rural-CO2';
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassA-rural-CO2PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassA-rural-CO2SigmaY.mat");
+        
+   case '2'
+        path = 'home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/';
+        str = 'Q10-U3-ClassB-rural-CO2';
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassB-rural-CO2PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassB-rural-CO2SigmaY.mat");
+   
+   case '3'
+        path = 'home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/';
+        str = 'Q10-U3-ClassC-rural-CO2';
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassC-rural-CO2PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassC-rural-CO2SigmaY.mat");
+        
+   case '4'
+        path = 'home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/';
+        str = 'Q10-U3-ClassD-rural-CO2';
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassD-rural-CO2PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassD-rural-CO2SigmaY.mat");
+   
+   case '5'
+        path = 'home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/';
+        str = 'Q10-U3-ClassE-rural-CO2';
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassE-rural-CO2PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassE-rural-CO2SigmaY.mat");
+        
+   case '6'
+        path = 'home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/';
+        str = 'Q10-U3-ClassF-rural-CO2';
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        
+   case '7'
+        path = 'home/ty/MSNsimulator/TurbulentPlumeSimulator/Ammonia/Case1/';
+        str = 'Ammonia-Case1';
+        load("home/ty/MSNsimulator/TurbulentPlumeSimulator/Ammonia/Case1/PlumeD.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        
+   case '8'
+        path = 'home/ty/MSNsimulator/TurbulentPlumeSimulator/CO2/Dense_Plume/';
+        str = 'CO2-DensePlume';
+        load('/home/ty/MSNsimulator/TurbulentPlumeSimulator/CO2/Dense_Plume/PlumeF100.mat');
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        PlumeD = Plume;
+        
+   case '9' % vorticity
+        path = 'home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/';
+        str = 'CaseF050-VxT20';
+        load('/home/ty/MSNsimulator/TurbulentPlumeSimulator/CO2/Dense_Plume/PlumeF100.mat');
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        PlumeD = Plume;
+        
+   case '12'
+        path = 'home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/';
+        str = 'VorticityX';
+        load("home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/ScaledVxslice.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        
+   case '13'
+        path = 'home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/';
+        str = 'VorticityY';
+        load("home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/ScaledVyslice.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        
+   case '14'
+        path = 'home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/';
+        str = 'VorticityZ';
+        load("home/ty/MSNsimulator/TurbulentPlumeSimulator/Case_F050/ScaledVzslice.mat");
+        load("/home/ty/MSNsimulator/GaussianPlumeSimulator/ATDmodel/Models/Q10-U3-ClassF-rural-CO2SigmaY.mat");
+        
+   
+        
+        otherwise
+            
+    end
+    
+end

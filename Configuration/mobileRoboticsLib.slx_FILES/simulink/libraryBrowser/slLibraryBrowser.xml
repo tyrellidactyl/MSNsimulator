@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library hasTree="1" name="mobileRoboticsLib" revision="R2017b">
+  <block_node SID="682" hasTree="0">
+    <block_name>Environments</block_name>
+    <block_class/>
+    <block_desc/>
+    <block_path>mobileRoboticsLib/Environments</block_path>
+    <block_open>mobileRoboticsLib/Environments</block_open>
+    <block_isNotLeafBlk>1</block_isNotLeafBlk>
+    <block_position>13  144  167  236</block_position>
+    <block_icon>Environments.svg</block_icon>
+    <keywords/>
+    <port_domains>NA.NA:0</port_domains>
+    <block_node SID="725" hasTree="0">
+      <block_name>Lidar Sensor</block_name>
+      <block_class>LidarSensor</block_class>
+      <block_desc>2D Lidar simulator</block_desc>
+      <block_path>mobileRoboticsLib/Environments/Lidar Sensor</block_path>
+      <block_open>mobileRoboticsLib/Environments/Lidar Sensor</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>100   75  245  145</block_position>
+      <block_icon>Environments/Lidar@20@Sensor.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+    </block_node>
+    <block_node SID="726" hasTree="0">
+      <block_name>Robot Visualizer</block_name>
+      <block_class>Visualizer2D</block_class>
+      <block_desc>2D Robot Visualizer</block_desc>
+      <block_path>mobileRoboticsLib/Environments/Robot Visualizer</block_path>
+      <block_open>mobileRoboticsLib/Environments/Robot Visualizer</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>370   75  505  145</block_position>
+      <block_icon>Environments/Robot@20@Visualizer.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:1</port_domains>
+    </block_node>
+    <block_node SID="613" hasTree="0">
+      <block_name>Object Detector</block_name>
+      <block_class>ObjectDetector</block_class>
+      <block_desc>Object detector simulator</block_desc>
+      <block_path>mobileRoboticsLib/Environments/Object Detector</block_path>
+      <block_open>mobileRoboticsLib/Environments/Object Detector</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>100  197  245  268</block_position>
+      <block_icon>Environments/Object@20@Detector.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:2,signal.out_signal:1</port_domains>
+    </block_node>
+    <block_node SID="816" hasTree="0">
+      <block_name>Multi-Robot Visualizer</block_name>
+      <block_class>Multi-Robot Visualizer</block_class>
+      <block_desc>Supply the pose and (optionally) lidar ranges for a single robot in a multi-robot setup.
+
+These blocks require a &quot;Multi-Robot Environment&quot; block to exist in the model.</block_desc>
+      <block_path>mobileRoboticsLib/Environments/Multi-Robot Visualizer</block_path>
+      <block_open>mobileRoboticsLib/Environments/Multi-Robot Visualizer</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>370  205  505  265</block_position>
+      <block_icon>Environments/Multi@2D@Robot@20@Visualizer.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:1</port_domains>
+    </block_node>
+    <block_node SID="773" hasTree="0">
+      <block_name>Robot Detector</block_name>
+      <block_class>RobotDetector</block_class>
+      <block_desc>Robot detector simulator</block_desc>
+      <block_path>mobileRoboticsLib/Environments/Robot Detector</block_path>
+      <block_open>mobileRoboticsLib/Environments/Robot Detector</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>100  325  245  395</block_position>
+      <block_icon>Environments/Robot@20@Detector.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.out_signal:1</port_domains>
+    </block_node>
+    <block_node SID="768" hasTree="0">
+      <block_name>Multi-Robot Environment</block_name>
+      <block_class>Multi-Robot Environment</block_class>
+      <block_desc>Displays map, waypoint, and object data for a multi-robot simulation.
+
+Use &quot;Multi-Robot Visualizer&quot; blocks to display individual robots in this environment.</block_desc>
+      <block_path>mobileRoboticsLib/Environments/Multi-Robot Environment</block_path>
+      <block_open>mobileRoboticsLib/Environments/Multi-Robot Environment</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>370  327  500  403</block_position>
+      <block_icon>Environments/Multi@2D@Robot@20@Environment.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:2</port_domains>
+    </block_node>
+  </block_node>
+  <block_node SID="689" hasTree="1">
+    <block_name>Kinematic Models</block_name>
+    <block_class/>
+    <block_desc/>
+    <block_path>mobileRoboticsLib/Kinematic Models</block_path>
+    <block_open>mobileRoboticsLib/Kinematic Models</block_open>
+    <block_isNotLeafBlk>1</block_isNotLeafBlk>
+    <block_position>257  144  412  236</block_position>
+    <block_icon>Kinematic@20@Models.svg</block_icon>
+    <keywords/>
+    <port_domains>NA.NA:0</port_domains>
+    <block_node SID="728" hasTree="0">
+      <block_name>Differential Drive</block_name>
+      <block_class/>
+      <block_desc/>
+      <block_path>mobileRoboticsLib/Kinematic Models/Differential Drive</block_path>
+      <block_open>mobileRoboticsLib/Kinematic Models/Differential Drive</block_open>
+      <block_isNotLeafBlk>1</block_isNotLeafBlk>
+      <block_position>185   54  340  146</block_position>
+      <block_icon>Kinematic@20@Models/Differential@20@Drive.svg</block_icon>
+      <keywords/>
+      <port_domains>NA.NA:0</port_domains>
+      <block_node SID="615" hasTree="0">
+        <block_name>Differential Drive\nForward Kinematics</block_name>
+        <block_class>Differential Drive Forward Kinematics</block_class>
+        <block_desc>Calculates the forward kinematics for a differential drive vehicle.
+
+Input: [wL; wR], the left and right wheel speeds (rad/s)
+
+Output: [v; w], the linear (m/s) and angular (rad/s) velocities of the vehicle</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive\nForward Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive
+Forward Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>85   74  180  146</block_position>
+        <block_icon>Kinematic@20@Models/Differential@20@Drive/Differential@20@Drive@A@Forward@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="508" hasTree="0">
+        <block_name>Differential Drive\nInverse Kinematics</block_name>
+        <block_class>Differential Drive Inverse Kinematics</block_class>
+        <block_desc>Calculates the forward kinematics for a differential drive vehicle.
+
+Input: [v; w], the linear (m/s) and angular (rad/s) velocities of the vehicle
+
+Output: [wL; wR], the left and right wheel speeds (rad/s)
+</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive\nInverse Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive
+Inverse Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>225   74  320  146</block_position>
+        <block_icon>Kinematic@20@Models/Differential@20@Drive/Differential@20@Drive@A@Inverse@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="514" hasTree="0">
+        <block_name>Differential Drive Simulation</block_name>
+        <block_class>Differential Drive Simulation</block_class>
+        <block_desc>Simulates the kinematics of a differential drive vehicle from a specified initial pose.
+
+Input: Left and right wheel speeds [wL; wR], in rad/s
+
+Output: Pose [x; y; theta], in m, m, and rad
+
+Set the Sample Time parameter to 0 for continuous-time simulation, or a positive number for discrete-time simulation.</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive Simulation</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive Simulation</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>375   74  470  146</block_position>
+        <block_icon>Kinematic@20@Models/Differential@20@Drive/Differential@20@Drive@20@Simulation.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="63" hasTree="0">
+        <block_name>Differential Drive\n(Simscape Multibody Model)</block_name>
+        <block_class>Differential Drive (Simscape Multibody Model)</block_class>
+        <block_desc>Kinematics-only (motion actuated) Simscape Multibody Model of a differential drive vehicle.
+
+Inputs: 
+Left and right wheel speeds [wL; wR], in rad/s
+Pose [x; y; theta], in m, m, and rad/s, respectively
+
+Connection Ports:
+R: Reference frame at center of vehicle
+G: Ground/world location
+</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive\n(Simscape Multibody Model)</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Differential Drive/Differential Drive
+(Simscape Multibody Model)</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>535   77  630  148</block_position>
+        <block_icon>Kinematic@20@Models/Differential@20@Drive/Differential@20@Drive@A@@28@Simscape@20@Multibody@20@Model@29@.svg</block_icon>
+        <keywords/>
+        <port_domains>connection.all:2,network_engine_domain.simmechanics.connections.frame:2,signal.in_signal:2</port_domains>
+      </block_node>
+    </block_node>
+    <block_node SID="764" hasTree="0">
+      <block_name>Triple Omniwheel</block_name>
+      <block_class/>
+      <block_desc/>
+      <block_path>mobileRoboticsLib/Kinematic Models/Triple Omniwheel</block_path>
+      <block_open>mobileRoboticsLib/Kinematic Models/Triple Omniwheel</block_open>
+      <block_isNotLeafBlk>1</block_isNotLeafBlk>
+      <block_position>400   54  555  146</block_position>
+      <block_icon>Kinematic@20@Models/Triple@20@Omniwheel.svg</block_icon>
+      <keywords/>
+      <port_domains>NA.NA:0</port_domains>
+      <block_node SID="622" hasTree="0">
+        <block_name>Triple Omniwheel\nForward Kinematics</block_name>
+        <block_class>Triple Omniwheel Forward Kinematics</block_class>
+        <block_desc>Calculates the forward kinematics for a three-wheeled vehicle with omniwheels.
+
+Input: Wheel speeds [w1; w2; w3] (rad/s)
+
+Output: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel\nForward Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel
+Forward Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>100   84  195  156</block_position>
+        <block_icon>Kinematic@20@Models/Triple@20@Omniwheel/Triple@20@Omniwheel@A@Forward@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="548" hasTree="0">
+        <block_name>Triple Omniwheel\nInverse Kinematics </block_name>
+        <block_class>Triple Omniwheel Inverse Kinematics</block_class>
+        <block_desc>Calculates the inverse kinematics for a three-wheeled vehicle with omniwheels.
+
+Input: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)
+
+Output: Wheel speeds [w1; w2; w3] (rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel\nInverse Kinematics </block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel
+Inverse Kinematics </block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>245   84  340  156</block_position>
+        <block_icon>Kinematic@20@Models/Triple@20@Omniwheel/Triple@20@Omniwheel@A@Inverse@20@Kinematics@20@.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="552" hasTree="0">
+        <block_name>Triple Omniwheel Simulation</block_name>
+        <block_class>Triple Omniwheel Simulation</block_class>
+        <block_desc>Simulates the kinematics of a three-wheeled vehicle with omniwheels, from a specified initial pose.
+
+Input: Wheel speeds [w1; w2; w3] (rad/s)
+
+Output: Pose [x; y; theta], in m, m, and rad
+
+Set the Sample Time parameter to 0 for continuous-time simulation, or a positive number for discrete-time simulation.</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel Simulation</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel Simulation</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>405   84  500  156</block_position>
+        <block_icon>Kinematic@20@Models/Triple@20@Omniwheel/Triple@20@Omniwheel@20@Simulation.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="389" hasTree="0">
+        <block_name>Triple Omniwheel\n(Simscape Multibody Model)</block_name>
+        <block_class>Triple Omniwheel (Simscape Multibody Model)</block_class>
+        <block_desc>Kinematics-only (motion actuated) Simscape Multibody Model of a three-wheeled vehicle with omniwheels.
+
+Inputs: 
+Wheel speeds [w1; w2; w3] (rad/s)
+Pose [x; y; theta], in m, m, and rad/s, respectively
+
+Connection Ports:
+R: Reference frame at center of vehicle
+G: Ground/world location</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel\n(Simscape Multibody Model)</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Triple Omniwheel/Triple Omniwheel
+(Simscape Multibody Model)</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>575   87  670  158</block_position>
+        <block_icon>Kinematic@20@Models/Triple@20@Omniwheel/Triple@20@Omniwheel@A@@28@Simscape@20@Multibody@20@Model@29@.svg</block_icon>
+        <keywords/>
+        <port_domains>connection.all:2,network_engine_domain.simmechanics.connections.frame:2,signal.in_signal:2</port_domains>
+      </block_node>
+    </block_node>
+    <block_node SID="774" hasTree="0">
+      <block_name>Generic Omniwheel</block_name>
+      <block_class/>
+      <block_desc/>
+      <block_path>mobileRoboticsLib/Kinematic Models/Generic Omniwheel</block_path>
+      <block_open>mobileRoboticsLib/Kinematic Models/Generic Omniwheel</block_open>
+      <block_isNotLeafBlk>1</block_isNotLeafBlk>
+      <block_position>615   54  770  146</block_position>
+      <block_icon>Kinematic@20@Models/Generic@20@Omniwheel.svg</block_icon>
+      <keywords/>
+      <port_domains>NA.NA:0</port_domains>
+      <block_node SID="806" hasTree="0">
+        <block_name>Generic Omniwheel \nForward Kinematics</block_name>
+        <block_class>Generic Omniwheel Forward Kinematics</block_class>
+        <block_desc>Calculates the forward kinematics for an N-wheeled vehicle with omniwheels.
+
+Input: Wheel speeds [w1; w2; ... ; wN] (rad/s)
+
+Output: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Generic Omniwheel/Generic Omniwheel \nForward Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Generic Omniwheel/Generic Omniwheel 
+Forward Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>100   84  195  156</block_position>
+        <block_icon>Kinematic@20@Models/Generic@20@Omniwheel/Generic@20@Omniwheel@20@@A@Forward@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="810" hasTree="0">
+        <block_name>Generic Omniwheel \nInverse Kinematics </block_name>
+        <block_class>Generic Omniwheel Inverse Kinematics</block_class>
+        <block_desc>Calculates the inverse kinematics for an N-wheeled vehicle with omniwheels.
+
+Input: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)
+
+Output: Wheel speeds [w1; w2; ... ; wN] (rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Generic Omniwheel/Generic Omniwheel \nInverse Kinematics </block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Generic Omniwheel/Generic Omniwheel 
+Inverse Kinematics </block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>245   84  340  156</block_position>
+        <block_icon>Kinematic@20@Models/Generic@20@Omniwheel/Generic@20@Omniwheel@20@@A@Inverse@20@Kinematics@20@.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="814" hasTree="0">
+        <block_name>Generic Omniwheel Simulation</block_name>
+        <block_class>Generic Omniwheel Simulation</block_class>
+        <block_desc>Simulates the kinematics of an N-wheeled vehicle with omniwheels, from a specified initial pose.
+
+Input: Wheel speeds [w1; w2; ... ; wN] (rad/s)
+
+Output: Pose [x; y; theta], in m, m, and rad
+
+Set the Sample Time parameter to 0 for continuous-time simulation, or a positive number for discrete-time simulation.</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Generic Omniwheel/Generic Omniwheel Simulation</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Generic Omniwheel/Generic Omniwheel Simulation</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>405   84  500  156</block_position>
+        <block_icon>Kinematic@20@Models/Generic@20@Omniwheel/Generic@20@Omniwheel@20@Simulation.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+    </block_node>
+    <block_node SID="765" hasTree="0">
+      <block_name>Four-Wheel Steering</block_name>
+      <block_class/>
+      <block_desc/>
+      <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering</block_path>
+      <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering</block_open>
+      <block_isNotLeafBlk>1</block_isNotLeafBlk>
+      <block_position>185  199  340  291</block_position>
+      <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Steering.svg</block_icon>
+      <keywords/>
+      <port_domains>NA.NA:0</port_domains>
+      <block_node SID="628" hasTree="0">
+        <block_name>Four-Wheel Steering\nForward Kinematics</block_name>
+        <block_class>Four-Wheel Steering Forward Kinematics</block_class>
+        <block_desc>Calculates the forward kinematics for a four-wheeled vehicle with front and rear drive and steering.
+
+Input: 
+Wheel speeds [wf; wr] (rad/s)
+Steer angles [phif; phir] (rad)
+
+Output: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering\nForward Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Forward Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>120   66  215  139</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Steering/Four@2D@Wheel@20@Steering@A@Forward@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:2,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="633" hasTree="0">
+        <block_name>Four-Wheel Steering\nInverse Kinematics</block_name>
+        <block_class>Four-Wheel Steering Inverse Kinematics</block_class>
+        <block_desc>Calculates the inverse kinematics for a four-wheeled vehicle with front and rear drive and steering.
+
+Input: 
+Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)
+In Front Steering and Zero Sideslip mode, the velocity inputs used are forward and angular speed [vx;w]
+In Parallel Steering mode, the velocity inputs used are forward and lateral speed [vx;vy]
+
+Output: 
+Wheel speeds [wf; wr] (rad/s)
+Steer angles [phif; phir] (rad)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering\nInverse Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>275   65  370  145</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Steering/Four@2D@Wheel@20@Steering@A@Inverse@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:2</port_domains>
+      </block_node>
+      <block_node SID="652" hasTree="0">
+        <block_name>Four-Wheel Steering Simulation</block_name>
+        <block_class>Four-Wheel Steering Simulation</block_class>
+        <block_desc>Simulates the kinematics of a four-wheeled vehicle with front and rear drive and steering, from a specified initial pose.
+
+Input: 
+Wheel speeds [wf; wr] (rad/s)
+Steer angles [phif; phir] (rad)
+
+Output: Pose [x; y; theta], in m, m, and rad
+
+Set the Sample Time parameter to 0 for continuous-time simulation, or a positive number for discrete-time simulation.</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering Simulation</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering Simulation</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>445   66  540  144</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Steering/Four@2D@Wheel@20@Steering@20@Simulation.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:2,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="148" hasTree="0">
+        <block_name>Four-Wheel Steering\n(Simscape Multibody Model)</block_name>
+        <block_class>Four-Wheel Steering (Simscape Multibody Model)</block_class>
+        <block_desc>Kinematics-only (motion actuated) Simscape Multibody Model of a four-wheeled vehicle with front and rear drive and steering.
+
+Input: 
+Wheel speeds [wf; wr] (rad/s)
+Steer angles [phif; phir] (rad)
+Pose [x; y; theta], in m, m, and rad/s, respectively
+
+Connection Ports:
+R: Reference frame at center of vehicle
+G: Ground/world location</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering\n(Simscape Multibody Model)</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+(Simscape Multibody Model)</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>620   69  715  141</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Steering/Four@2D@Wheel@20@Steering@A@@28@Simscape@20@Multibody@20@Model@29@.svg</block_icon>
+        <keywords/>
+        <port_domains>connection.all:2,network_engine_domain.simmechanics.connections.frame:2,signal.in_signal:3</port_domains>
+      </block_node>
+    </block_node>
+    <block_node SID="766" hasTree="0">
+      <block_name>Four-Wheel Mecanum</block_name>
+      <block_class/>
+      <block_desc/>
+      <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum</block_path>
+      <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum</block_open>
+      <block_isNotLeafBlk>1</block_isNotLeafBlk>
+      <block_position>400  199  555  291</block_position>
+      <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Mecanum.svg</block_icon>
+      <keywords/>
+      <port_domains>NA.NA:0</port_domains>
+      <block_node SID="653" hasTree="0">
+        <block_name>Four-Wheel Mecanum\nForward Kinematics</block_name>
+        <block_class>Four-Wheel Mecanum Forward Kinematics</block_class>
+        <block_desc>Calculates the forward kinematics for a four-wheeled vehicle with Mecanum wheels.
+
+Input: Wheel speeds [w1; w2; w3; w4] (rad/s)
+
+Output: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum\nForward Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+Forward Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>115   64  210  136</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Mecanum/Four@2D@Wheel@20@Mecanum@A@Forward@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="661" hasTree="0">
+        <block_name>Four-Wheel Mecanum\nInverse Kinematics</block_name>
+        <block_class>Four-Wheel Mecanum Inverse Kinematics</block_class>
+        <block_desc>Calculates the inverse kinematics for a four-wheeled vehicle with Mecanum wheels.
+
+Input: Vehicle velocities [vx; vy; w] in body coordinates (m/s, m/s, and rad/s)
+
+Output: Wheel speeds [w1; w2; w3; w4] (rad/s)</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum\nInverse Kinematics</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+Inverse Kinematics</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>280   64  375  136</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Mecanum/Four@2D@Wheel@20@Mecanum@A@Inverse@20@Kinematics.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="665" hasTree="0">
+        <block_name>Four-Wheel Mecanum Simulation</block_name>
+        <block_class>Four-Wheel Mecanum Simulation</block_class>
+        <block_desc>Simulates the kinematics of a four-wheeled vehicle with Mecanum wheels, from a specified initial pose.
+
+Input: Wheel speeds [w1; w2; w3; w4] (rad/s)
+
+Output: Pose [x; y; theta], in m, m, and rad
+
+Set the Sample Time parameter to 0 for continuous-time simulation, or a positive number for discrete-time simulation.</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum Simulation</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum Simulation</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>450   64  545  136</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Mecanum/Four@2D@Wheel@20@Mecanum@20@Simulation.svg</block_icon>
+        <keywords/>
+        <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+      </block_node>
+      <block_node SID="258" hasTree="0">
+        <block_name>Four-Wheel Mecanum\n(Simscape Multibody Model)</block_name>
+        <block_class>Four-Wheel Mecanum (Simscape Multibody Model)</block_class>
+        <block_desc>Kinematics-only (motion actuated) Simscape Multibody Model of a four-wheeled vehicle with Mecanum wheels.
+
+Inputs: 
+Wheel speeds [w1; w2; w3; w4] (rad/s)
+Pose [x; y; theta], in m, m, and rad/s, respectively
+
+Connection Ports:
+R: Reference frame at center of vehicle
+G: Ground/world location</block_desc>
+        <block_path>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum\n(Simscape Multibody Model)</block_path>
+        <block_open>mobileRoboticsLib/Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+(Simscape Multibody Model)</block_open>
+        <block_isNotLeafBlk>0</block_isNotLeafBlk>
+        <block_position>620   67  715  138</block_position>
+        <block_icon>Kinematic@20@Models/Four@2D@Wheel@20@Mecanum/Four@2D@Wheel@20@Mecanum@A@@28@Simscape@20@Multibody@20@Model@29@.svg</block_icon>
+        <keywords/>
+        <port_domains>connection.all:2,network_engine_domain.simmechanics.connections.frame:2,signal.in_signal:2</port_domains>
+      </block_node>
+    </block_node>
+  </block_node>
+  <block_node SID="685" hasTree="0">
+    <block_name>Utilities</block_name>
+    <block_class/>
+    <block_desc/>
+    <block_path>mobileRoboticsLib/Utilities</block_path>
+    <block_open>mobileRoboticsLib/Utilities</block_open>
+    <block_isNotLeafBlk>1</block_isNotLeafBlk>
+    <block_position>505  144  660  236</block_position>
+    <block_icon>Utilities.svg</block_icon>
+    <keywords/>
+    <port_domains>NA.NA:0</port_domains>
+    <block_node SID="346" hasTree="0">
+      <block_name>World to Body Velocity</block_name>
+      <block_class>World to Body Velocity</block_class>
+      <block_desc>Converts a 2D velocity input [vx;vy;w] from world (global) coordinates to body (vehicle) coordinates.
+
+vx = Linear velocity in x-direction (longitudinal)
+vy = Linear velocity in y-direction (lateral)
+w = Angular velocity (about z-axis)</block_desc>
+      <block_path>mobileRoboticsLib/Utilities/World to Body Velocity</block_path>
+      <block_open>mobileRoboticsLib/Utilities/World to Body Velocity</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>135   77  230  153</block_position>
+      <block_icon>Utilities/World@20@to@20@Body@20@Velocity.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:2,signal.out_signal:1</port_domains>
+    </block_node>
+    <block_node SID="130" hasTree="0">
+      <block_name>Body to World Velocity</block_name>
+      <block_class>Body to World Velocity</block_class>
+      <block_desc>Converts a 2D velocity input [vx;vy;w] from body (vehicle) coordinates to world (global) coordinates.
+
+vx = Linear velocity in x-direction (longitudinal)
+vy = Linear velocity in y-direction (lateral)
+w = Angular velocity (about z-axis)</block_desc>
+      <block_path>mobileRoboticsLib/Utilities/Body to World Velocity</block_path>
+      <block_open>mobileRoboticsLib/Utilities/Body to World Velocity</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>135  211  230  284</block_position>
+      <block_icon>Utilities/Body@20@to@20@World@20@Velocity.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:2,signal.out_signal:1</port_domains>
+    </block_node>
+    <block_node SID="614" hasTree="0">
+      <block_name>Generic Vehicle Simulation</block_name>
+      <block_class>Generic Vehicle Simulation</block_class>
+      <block_desc>Simulates the kinematics of a generic vehicle, from a specified initial pose.
+
+Input: Body velocities [vx; vy; w], in m/s, m/s, and rad/s
+
+Output: Pose [x; y; theta], in m, m, and rad
+
+Set the Sample Time parameter to 0 for continuous-time simulation, or a positive number for discrete-time simulation.</block_desc>
+      <block_path>mobileRoboticsLib/Utilities/Generic Vehicle Simulation</block_path>
+      <block_open>mobileRoboticsLib/Utilities/Generic Vehicle Simulation</block_open>
+      <block_isNotLeafBlk>0</block_isNotLeafBlk>
+      <block_position>135  344  230  416</block_position>
+      <block_icon>Utilities/Generic@20@Vehicle@20@Simulation.svg</block_icon>
+      <keywords/>
+      <port_domains>signal.in_signal:1,signal.out_signal:1</port_domains>
+    </block_node>
+  </block_node>
+</library>

@@ -1,0 +1,2489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Stateflow>
+  <machine id="23">
+    <P Name="created">08-Jan-2018 13:52:50</P>
+    <P Name="isLibrary">1</P>
+    <P Name="sfVersion">80000012</P>
+    <Children>
+      <target id="166" name="sfun">
+        <P Name="description">Default Simulink S-Function Target.</P>
+      </target>
+      <chart id="24">
+        <P Name="name">Kinematic Models/Differential Drive/Differential Drive
+Forward Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">24</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">20</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="updateMethod">DISCRETE</P>
+        <P Name="sampleTime">-1</P>
+        <P Name="chartFileNumber">1</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">diffDriveFwdKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">24</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function [v,w] = diffDriveFwdKin(wL,wR,wheelRadius,wheelBase)
+    
+    % Initialize DifferentialDrive object
+    persistent robot
+    if isempty(robot)
+        robot = DifferentialDrive(wheelRadius,wheelBase);
+    end
+    
+    % Run object&apos;s forward kinematics method
+    [v,w] = forwardKinematics(robot,wL,wR);
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="wL">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="v">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="wR">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelBase">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="15" name="w">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">24</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">24</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="35">
+        <P Name="name">Kinematic Models/Differential Drive/Differential Drive
+Inverse Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">35</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">10</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">2</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">diffDriveInvKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">35</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function [wL,wR] = diffDriveInvKin(v,w,wheelRadius,wheelBase)
+    
+    % Initialize DifferentialDrive object
+    persistent robot
+    if isempty(robot)
+        robot = DifferentialDrive(wheelRadius,wheelBase);
+    end
+    
+    % Run object&apos;s forward kinematics method
+    [wL,wR] = inverseKinematics(robot,v,w);
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="v">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wL">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="w">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="7" name="wR">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelBase">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">35</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">35</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="46">
+        <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Forward Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">46</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">22</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="updateMethod">DISCRETE</P>
+        <P Name="sampleTime">-1</P>
+        <P Name="chartFileNumber">3</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">fourWheelSteerFwdKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">46</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function bodySpeed = fourWheelSteerFwdKin(wheelSpeeds,wheelRadius,frontWheelDist,rearWheelDist, steerAngles) ...
+    
+    % Initialize Four-Wheel Steering object
+    persistent robot
+    if isempty(robot)
+        robot = FourWheelSteering(wheelRadius,[frontWheelDist,rearWheelDist]);
+    end
+    
+    % Run object&apos;s forward kinematics method
+    bodySpeed = forwardKinematics(robot,wheelSpeeds,steerAngles);
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="wheelSpeeds">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="bodySpeed">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="21" name="frontWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="22" name="rearWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="steerAngles">
+            <P Name="scope">INPUT_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">46</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">46</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="57">
+        <P Name="name">Kinematic Models/Triple Omniwheel/Triple Omniwheel
+Inverse Kinematics /MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">57</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">10</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">4</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">tripleOmniInverseKinematics</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">57</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function wheelSpeeds = tripleOmniInverseKinematics(bodySpeed,wheelRadius,wheelAngles, robotRadius)
+    
+    % Initialize TripleOmniwheel object
+    persistent robot
+    if isempty(robot)
+        robot = TripleOmniwheel(wheelRadius,robotRadius,wheelAngles);
+    end
+    
+    % Run object&apos;s inverse kinematics method
+    wheelSpeeds = inverseKinematics(robot,bodySpeed);
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="bodySpeed">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wheelSpeeds">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">3</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelAngles">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="robotRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">57</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">57</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="67">
+        <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics/Inverse Kinematics/Front Steering</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">67</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">11</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">5</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">fourWheelSteerInvKinFrontSteer</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">67</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function [wheelSpeeds,steerAngles] = fourWheelSteerInvKinFrontSteer ...
+         (ref,wheelRadius,frontWheelDist,rearWheelDist)
+    % ref = [vx;w]
+    
+    % Initialize FourWheelSteering object
+    persistent robot
+    if isempty(robot)
+        robot = FourWheelSteering(wheelRadius,[frontWheelDist,rearWheelDist]);
+    end
+    
+    % Run object&apos;s inverse kinematics method
+    [wheelSpeeds,steerAngles] = ...
+        inverseKinematicsFrontSteer(robot,ref(1),ref(2));
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="ref">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wheelSpeeds">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="frontWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="rearWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="11" name="steerAngles">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">67</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">67</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="78">
+        <P Name="name">Kinematic Models/Triple Omniwheel/Triple Omniwheel
+Forward Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">78</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">21</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="updateMethod">DISCRETE</P>
+        <P Name="sampleTime">-1</P>
+        <P Name="chartFileNumber">6</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">tripleOmniFwdKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">78</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function bodySpeed = tripleOmniFwdKin(wheelSpeeds,wheelRadius,robotRadius,wheelAngles)
+    
+    % Initialize TripleOmniwheel object
+    persistent robot
+    if isempty(robot)
+        robot = TripleOmniwheel(wheelRadius,robotRadius,wheelAngles);
+    end
+    
+    % Run object&apos;s forward kinematics method
+    bodySpeed = forwardKinematics(robot,wheelSpeeds);
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="wheelSpeeds">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="bodySpeed">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="robotRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="21" name="wheelAngles">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">78</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">78</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="88">
+        <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics/Inverse Kinematics/Zero Sideslip</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">88</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">11</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">7</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">fourWheelSteerInvKinZeroSideslip</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">88</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function [wheelSpeeds,steerAngles] = fourWheelSteerInvKinZeroSideslip ...
+         (ref,wheelRadius,frontWheelDist,rearWheelDist)
+    % ref = [vx;w]
+
+    % Initialize FourWheelSteering object
+    persistent robot
+    if isempty(robot)
+        robot = FourWheelSteering(wheelRadius,[frontWheelDist,rearWheelDist]);
+    end
+    
+    % Run object&apos;s inverse kinematics method
+    [wheelSpeeds,steerAngles] = ... 
+        inverseKinematicsZeroSideslip(robot,ref(1),ref(2));
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="ref">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wheelSpeeds">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="frontWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="rearWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="11" name="steerAngles">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">88</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">88</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="99">
+        <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics/Inverse Kinematics/Parallel Steering</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">99</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">11</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">8</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">fourWheelSteerInvKinParallelSteer</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">99</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function [wheelSpeeds,steerAngles] = fourWheelSteerInvKinParallelSteer ...
+         (ref,wheelRadius,frontWheelDist,rearWheelDist)
+    % ref = [vx;vy]
+    
+    % Initialize FourWheelSteering object
+    persistent robot
+    if isempty(robot)
+        robot = FourWheelSteering(wheelRadius,[frontWheelDist,rearWheelDist]);
+    end
+    
+    % Run object&apos;s inverse kinematics method
+    [wheelSpeeds,steerAngles] = ... 
+        inverseKinematicsParallelSteer(robot,ref(1),ref(2));
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="ref">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wheelSpeeds">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="frontWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="rearWheelDist">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="11" name="steerAngles">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">99</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">99</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="110">
+        <P Name="name">Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+Forward Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">110</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">21</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="updateMethod">DISCRETE</P>
+        <P Name="sampleTime">-1</P>
+        <P Name="chartFileNumber">9</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">fourWheelMecanumFwdKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">110</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function bodySpeed = fourWheelMecanumFwdKin(wheelSpeeds,wheelRadius,wheelBase,wheelTrack)
+    
+    % Initialize FourWheelMecanum object
+    persistent robot
+    if isempty(robot)
+        robot = FourWheelMecanum(wheelRadius,wheelBase,wheelTrack);
+    end
+    
+    % Run object&apos;s forward kinematics method
+    bodySpeed = forwardKinematics(robot,wheelSpeeds);
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="wheelSpeeds">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="bodySpeed">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelBase">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="21" name="wheelTrack">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">110</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">110</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="120">
+        <P Name="name">Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+Inverse Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">120</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">10</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">10</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">fourWheelMecanumInvKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">120</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function wheelSpeeds = fourWheelMecanumInvKin(bodySpeed,wheelRadius,wheelBase,wheelTrack)
+    
+    % Initialize FourWheelMecanum object
+    persistent robot
+    if isempty(robot)
+        robot = FourWheelMecanum(wheelRadius,wheelBase,wheelTrack);
+    end
+    
+    % Run object&apos;s inverse kinematics method
+    wheelSpeeds = inverseKinematics(robot,bodySpeed);
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="bodySpeed">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wheelSpeeds">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelBase">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="wheelTrack">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">120</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">120</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="130">
+        <P Name="name">Environments/Multi-Robot Environment/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">130</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">6</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">11</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">visualizeWaypointsAndObjects</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">130</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function visualizeWaypointsAndObjects(wps,objs)
+
+    coder.extrinsic(&apos;internal.multiRobotVizWorld&apos;)
+    internal.multiRobotVizWorld(wps,objs)
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="wps">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="objs">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">130</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">130</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="137">
+        <P Name="name">Environments/Multi-Robot Visualizer/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">137</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">9</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">12</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">visualizeRobot</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">137</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function visualizeRobot(pose, rngs, idx, hasLidar)
+
+    coder.extrinsic(&apos;internal.multiRobotVizSet&apos;);
+    if hasLidar
+        internal.multiRobotVizSet(idx,pose,rngs);
+    else
+        internal.multiRobotVizSet(idx,pose,[]);
+    end
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="6" name="pose">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="rngs">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="4" name="idx">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="7" name="hasLidar">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">137</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">137</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="146">
+        <P Name="name">Kinematic Models/Generic Omniwheel/Generic Omniwheel 
+Forward Kinematics/MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">146</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">21</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="updateMethod">DISCRETE</P>
+        <P Name="sampleTime">-1</P>
+        <P Name="chartFileNumber">13</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">genericOmniFwdKin</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">146</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function bodySpeed = genericOmniFwdKin(wheelSpeeds,wheelRadius,wheelPositions,wheelAngles)
+    
+    % Initialize TripleOmniwheel object
+    persistent robot
+    if isempty(robot)
+        robot = GenericOmniwheel(wheelRadius,wheelPositions,wheelAngles);
+    end
+    
+    % Run object&apos;s forward kinematics method
+    bodySpeed = forwardKinematics(robot,wheelSpeeds);
+
+end
+</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="wheelSpeeds">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="bodySpeed">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelPositions">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="21" name="wheelAngles">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">146</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">146</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+      <chart id="156">
+        <P Name="name">Kinematic Models/Generic Omniwheel/Generic Omniwheel 
+Inverse Kinematics /MATLAB Function</P>
+        <P Name="windowPosition">[422 539.941 189 413]</P>
+        <P Name="viewLimits">[0 156.75 0 153.75]</P>
+        <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+        <P Name="viewObj">156</P>
+        <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
+        <P Name="ssIdHighWaterMark">10</P>
+        <P Name="decomposition">CLUSTER_CHART</P>
+        <P Name="type">EML_CHART</P>
+        <P Name="chartFileNumber">14</P>
+        <P Name="disableImplicitCasting">1</P>
+        <eml>
+          <P Name="name">genericOmniInverseKinematics</P>
+        </eml>
+        <Children>
+          <state SSID="1">
+            <P Name="labelString">eML_blk_kernel()</P>
+            <P Name="position">[18 64.5 118 66]</P>
+            <P Name="fontSize">12</P>
+            <P Name="superState">SUBCHART</P>
+            <P Name="subviewer">156</P>
+            <P Name="type">FUNC_STATE</P>
+            <P Name="decomposition">CLUSTER_STATE</P>
+            <eml>
+              <P Name="isEML">1</P>
+              <P Name="script">function wheelSpeeds = genericOmniInverseKinematics(bodySpeed,wheelRadius,wheelPositions,wheelAngles)
+    
+    % Initialize TripleOmniwheel object
+    persistent robot
+    if isempty(robot)
+        robot = GenericOmniwheel(wheelRadius,wheelPositions,wheelAngles);
+    end
+    
+    % Run object&apos;s inverse kinematics method
+    wheelSpeeds = inverseKinematics(robot,bodySpeed);
+
+end</P>
+              <P Name="editorLayout" Class="double">Matrix(4,1)
+[10.0, 5.0, 700.0, 500.0]</P>
+            </eml>
+          </state>
+          <data SSID="4" name="bodySpeed">
+            <P Name="scope">INPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="6" name="wheelRadius">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">2</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="9" name="wheelPositions">
+            <P Name="scope">PARAMETER_DATA</P>
+            <P Name="paramIndexForInitFromWorkspace">1</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="5" name="wheelSpeeds">
+            <P Name="scope">OUTPUT_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_NO</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <data SSID="10" name="wheelAngles">
+            <P Name="scope">PARAMETER_DATA</P>
+            <props>
+              <array>
+                <P Name="size">-1</P>
+              </array>
+              <type>
+                <P Name="method">SF_INHERITED_TYPE</P>
+                <P Name="primitive">SF_DOUBLE_TYPE</P>
+                <P Name="isSigned">1</P>
+                <P Name="wordLength">16</P>
+              </type>
+              <P Name="complexity">SF_COMPLEX_INHERITED</P>
+              <P Name="frame">SF_FRAME_INHERITED</P>
+              <unit>
+                <P Name="name">inherit</P>
+              </unit>
+            </props>
+            <P Name="dataType">Inherit: Same as Simulink</P>
+          </data>
+          <transition SSID="2">
+            <P Name="labelString">{eML_blk_kernel();}</P>
+            <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+            <P Name="fontSize">12</P>
+            <src>
+              <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+            </src>
+            <dst>
+              <P Name="SSID">3</P>
+              <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+            </dst>
+            <P Name="midPoint">[23.5747 24.9468]</P>
+            <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+            <P Name="subviewer">156</P>
+            <P Name="drawStyle">SMART</P>
+            <slide>
+              <P Name="sticky">BOTH_STICK</P>
+            </slide>
+            <P Name="executionOrder">1</P>
+          </transition>
+          <junction SSID="3">
+            <P Name="position">[23.5747 49.5747 7]</P>
+            <P Name="subviewer">156</P>
+            <P Name="type">CONNECTIVE_JUNCTION</P>
+          </junction>
+        </Children>
+      </chart>
+    </Children>
+  </machine>
+  <instance id="34">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Differential Drive/Differential Drive
+Forward Kinematics/MATLAB Function</P>
+    <P Name="chart">24</P>
+  </instance>
+  <instance id="45">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Differential Drive/Differential Drive
+Inverse Kinematics/MATLAB Function</P>
+    <P Name="chart">35</P>
+  </instance>
+  <instance id="56">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Forward Kinematics/MATLAB Function</P>
+    <P Name="chart">46</P>
+  </instance>
+  <instance id="66">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Triple Omniwheel/Triple Omniwheel
+Inverse Kinematics /MATLAB Function</P>
+    <P Name="chart">57</P>
+  </instance>
+  <instance id="77">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics/Inverse Kinematics/Front Steering</P>
+    <P Name="chart">67</P>
+  </instance>
+  <instance id="87">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Triple Omniwheel/Triple Omniwheel
+Forward Kinematics/MATLAB Function</P>
+    <P Name="chart">78</P>
+  </instance>
+  <instance id="98">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics/Inverse Kinematics/Zero Sideslip</P>
+    <P Name="chart">88</P>
+  </instance>
+  <instance id="109">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Four-Wheel Steering/Four-Wheel Steering
+Inverse Kinematics/Inverse Kinematics/Parallel Steering</P>
+    <P Name="chart">99</P>
+  </instance>
+  <instance id="119">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+Forward Kinematics/MATLAB Function</P>
+    <P Name="chart">110</P>
+  </instance>
+  <instance id="129">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Four-Wheel Mecanum/Four-Wheel Mecanum
+Inverse Kinematics/MATLAB Function</P>
+    <P Name="chart">120</P>
+  </instance>
+  <instance id="136">
+    <P Name="machine">23</P>
+    <P Name="name">Environments/Multi-Robot Environment/MATLAB Function</P>
+    <P Name="chart">130</P>
+  </instance>
+  <instance id="145">
+    <P Name="machine">23</P>
+    <P Name="name">Environments/Multi-Robot Visualizer/MATLAB Function</P>
+    <P Name="chart">137</P>
+  </instance>
+  <instance id="155">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Generic Omniwheel/Generic Omniwheel 
+Forward Kinematics/MATLAB Function</P>
+    <P Name="chart">146</P>
+  </instance>
+  <instance id="165">
+    <P Name="machine">23</P>
+    <P Name="name">Kinematic Models/Generic Omniwheel/Generic Omniwheel 
+Inverse Kinematics /MATLAB Function</P>
+    <P Name="chart">156</P>
+  </instance>
+</Stateflow>
